@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <head>
-        <nav class="menu">
-            <div class="logo">
-                <img src="./img/Panelinha.png" alt="">
-            </div>
-            <ul>
-                <li>Home</li>
-                <li>Saladas</li>
-                <li>Salgados</li>
-                <li>Sobremesas</li>
-            </ul>
-            <div class="login">
-                <a href="">Login</a>
-            </div>
-        </nav>
-    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <title>Panelinha</title>
+  </head>
+  <body ng-app="panelinha" ng-controller="home" ng-init="">
+    <header>
+      <nav class="menu">
+        <div class="logo">
+          <img src="./img/Panelinha.png" alt="" />
+        </div>
+        <ul>
+          <li><a href="#!">Home</a></li>
+          <li><a href="#!saladas">Saladas</a></li>
+          <li><a href="#!salgados">Salgados</a></li>
+          <li><a href="#!sobremesas">Sobremesas</a></li>
+        </ul>
+        <div class="login">
+          <a href="">Login</a>
+        </div>
+      </nav>
+    </header>
 
-    <div ng-app="">
-        
-    </div>
-    
+    <main>
+      <ng-view> </ng-view>
+    </main>
+
     <footer>
-        <nav class="rodape">
-            <ul class="menu_rodape">
-                <li>Sobre</li>
-                <li>Conteto</li>
-                <li>Privacidade</li>
-                <li>Termos</li>
-            </ul>
-            <ul class="redes">
-                <li><img src="" alt="Instagram"></li>
-                <li><img src="" alt="Facebook"></li>
-                <li><img src="" alt="Twitter"></li>
-            </ul>
-        </nav>
+      <nav class="rodape">
+        <ul class="menu_rodape">
+          <li>Sobre</li>
+          <li>Conteto</li>
+          <li>Privacidade</li>
+          <li>Termos</li>
+        </ul>
+        <ul class="redes">
+          <li><img src="" alt="Instagram" /></li>
+          <li><img src="" alt="Facebook" /></li>
+          <li><img src="" alt="Twitter" /></li>
+        </ul>
+      </nav>
     </footer>
-    <link rel="stylesheet" href="./js/index.js">
-</body>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
