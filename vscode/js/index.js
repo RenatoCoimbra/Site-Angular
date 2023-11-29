@@ -1,31 +1,33 @@
 
 var app = angular.module('panelinha',['ngRoute'])
 
-//Criação de suas controllers
-app.controller('home', function($scope) {
-    $scope.nome = "saladas"
-});
+let time = 5000,
+    currentImageIndex = 0,
+    images = document
+                .querySelectorAll("#slider img")
+    max = images.length;
 
+function nextImage() {
 
+    images[currentImageIndex]
+        .classList.remove("selected")
 
+    currentImageIndex++
 
+    if(currentImageIndex >= max)
+        currentImageIndex = 0
 
+    images[currentImageIndex]
+        .classList.add("selected")
+}
 
+function start() {
+    setInterval(() => {
+        // troca de image
+        nextImage()
+    }, time)
+}
 
+window.addEventListener("load", start)
+style.css
 
-app.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "./templates/main.html",
-        controller:"artigos_base"
-      })
-    .when("/artigos", {
-        templateUrl : "./templates/saladas.html",
-        controller:"saladas"
-      })
-    .when("/leitura/:art",{
-      templateUrl : "./templates/leitura.html",
-        controller:"artigo"
-    })
-
-  });
