@@ -1,13 +1,14 @@
 
 var app = angular.module('panelinha',['ngRoute'])
 
+app.controller("home", function($scope){
+    
 let time = 5000,
-    currentImageIndex = 0,
-    images = document
-                .querySelectorAll("#slider img")
-    max = images.length;
+currentImageIndex = 0,
+images = document.querySelectorAll("#slider img")
+max = images.length;
 
-function nextImage() {
+$scope.next = function nextImage() {
 
     images[currentImageIndex]
         .classList.remove("selected")
@@ -21,13 +22,36 @@ function nextImage() {
         .classList.add("selected")
 }
 
-function start() {
+$scope.startIm = function start() {
     setInterval(() => {
         // troca de image
-        nextImage()
+        console.log("A")
+        $scope.next()
     }, time)
 }
 
-window.addEventListener("load", start)
-style.css
+$scope.startIm()
+
+})
+
+app.config(function ($routeProvider) {
+    $routeProvider
+      .when("/", {
+        templateUrl: "./templates/main.html"
+        ,controller:"home"
+      })
+      .when("/saladas", {
+        templateUrl: "./templates/saladas.html"
+        
+      })
+      .when("/massas", {
+        templateUrl: "./templates/massas.html"
+
+    })
+    .when("/sobremesas", {
+      templateUrl: "./templates/sobremesas.html"
+        
+      })
+  
+  });
 
