@@ -1,0 +1,171 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: cornsilk;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cornsilk;
+  margin: 2vh;
+  opacity: 0.7;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  color: #000;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2vh;
+  width: 100%;
+}
+
+.menu ul li {
+  padding: 15px 10px;
+  margin-left: 5vh;
+  background-color: #000;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  background-color: #000;
+  color: cornsilk;
+  font-family: "Courgette", cursive;
+  font-size: 18px;
+}
+
+.menu ul li:hover {
+  text-decoration: wavy;
+  color: cornsilk;
+}
+
+.logo {
+}
+
+.logo img {
+  float: right;
+  width: 250px;
+  height: 48px;
+}
+
+.login a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.banner {
+  margin-top: 2vh;
+  width: 100%;
+}
+#slider {
+  width: 90;
+  height: 60vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#slider img {
+  opacity: 0;
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: opacity 800ms;
+}
+
+#slider img.selected {
+  opacity: 1;
+}
+
+.dica img {
+  width: 95%;
+  height: 165px;
+  margin-top: 0.1vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.destaques ul {
+  margin-left: 30vh;
+}
+
+.destaques ul li {
+  width: 15vh;
+  height: 15vh;
+  margin-top: 3vh;
+  margin-left: 10vh;
+  border: solid black 2px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.rodape {
+  background-color: #000;
+  color: cornsilk;
+  border-top: solid black 2px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.menu_rodape {
+  display: flex;
+  background-color: #000;
+}
+
+.menu_rodape li {
+  margin-left: 3vh;
+  font-family: "Courgette", cursive;
+  background-color: #000;
+}
+
+.redes {
+  margin-top: 1vh;
+  display: flex;
+  background-color: #000;
+}
+
+.redes li {
+  margin-right: 3vh;
+  background-color: #000;
+}
+
+.redes li img {
+  width: 4vh;
+  height: 4vh;
+  border-radius: 1vh;
+  background-color: #000;
+}
+
+.apresentacaoNomes {
+  display: block;
+  margin-left: 45%;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  background-color: #000;
+  color: cornsilk;
+}
+
+.apresentacaoNomes b {
+  background-color: #000;
+}
