@@ -1,57 +1,45 @@
+var app = angular.module("panelinha", ["ngRoute"]);
 
-var app = angular.module('panelinha',['ngRoute'])
+app.controller("home", function ($scope) {
+  let time = 5000,
+    currentImageIndex = 0,
+    images = document.querySelectorAll("#slider img");
+  max = images.length;
 
-app.controller("home", function($scope){
-    
-let time = 5000,
-currentImageIndex = 0,
-images = document.querySelectorAll("#slider img")
-max = images.length;
+  $scope.next = function nextImage() {
+    images[currentImageIndex].classList.remove("selected");
 
-$scope.next = function nextImage() {
+    currentImageIndex++;
 
-    images[currentImageIndex]
-        .classList.remove("selected")
+    if (currentImageIndex >= max) currentImageIndex = 0;
 
-    currentImageIndex++
+    images[currentImageIndex].classList.add("selected");
+  };
 
-    if(currentImageIndex >= max)
-        currentImageIndex = 0
-
-    images[currentImageIndex]
-        .classList.add("selected")
-}
-
-$scope.startIm = function start() {
+  $scope.startIm = function start() {
     setInterval(() => {
-        // troca de image
-        console.log("A")
-        $scope.next()
-    }, time)
-}
+      // troca de image
+      console.log("A");
+      $scope.next();
+    }, time);
+  };
 
-$scope.startIm()
-
-})
+  $scope.startIm();
+});
 
 app.config(function ($routeProvider) {
-    $routeProvider
-      .when("/", {
-        templateUrl: "./templates/main.html"
-        ,controller:"home"
-      })
-      .when("/saladas", {
-        templateUrl: "./templates/saladas.html"
-        
-      })
-      .when("/massas", {
-        templateUrl: "./templates/massas.html"
-
+  $routeProvider
+    .when("/", {
+      templateUrl: "./templates/main.html",
+      controller: "home",
+    })
+    .when("/saladas", {
+      templateUrl: "./templates/saladas.html",
+    })
+    .when("/massas", {
+      templateUrl: "./templates/massas.html",
     })
     .when("/sobremesas", {
-      templateUrl: "./templates/sobremesas.html"
-        
-      })
-  
-  });
-
+      templateUrl: "./templates/sobremesas.html",
+    });
+});
