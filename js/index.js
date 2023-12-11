@@ -41,5 +41,34 @@ app.config(function ($routeProvider) {
     })
     .when("/sobremesas", {
       templateUrl: "./templates/sobremesas.html",
-    });
+    })
+    .when("/sobremesas/cheeseCake", {
+      templateUrl: "./templates/cheeseCake.html",
+    })
+    .when("/sobremesas/brownie", {
+      templateUrl: "./templates/brownie.html",
+    })
+    .when("/sobremesas/tiramissu", {
+      templateUrl: "./templates/tiramissu.html",
+    })
+    .when("/massas/pene", {
+      templateUrl: "./templates/pene.html",
+    })
+    .when("/massas/lasanhaPomodoro", {
+      templateUrl: "./templates/lasanhaPomodoro.html",
+    })
+    .when("/massas/rondelli", {
+      templateUrl: "./templates/rondelli.html",
+    })
+    .when("/saladas/CamaraoComAbacate", {
+      templateUrl: "./templates/camaraoComAbacate.html",
+    })
+    .when("/saladas/Primavera", {
+      templateUrl: "./templates/primavera.html",
+    })
+    .when("/saladas/ruculaComManga", {
+      templateUrl: "./templates/ruculaComManga.html",
+    })
+    ;
+    
 });
