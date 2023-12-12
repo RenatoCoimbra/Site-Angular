@@ -12,7 +12,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: cornsilk;
-  margin: 2vh;
   opacity: 0.7;
 }
 
@@ -50,9 +49,9 @@
 }
 
 .logo img {
-  float: right;
-  width: 250px;
-  height: 48px;
+  margin-top: 2vh;
+  width: 30vh;
+  height: 5vh;
 }
 
 .login a {
@@ -156,14 +155,22 @@
   background-color: #000;
 }
 
-.apresentacaoNomes {
+.redes a{
+  background-color: #000;
+}
+
+.rodape i b {
+  width: 21vh;
   display: block;
-  margin-left: 45%;
+  float: center;
   margin-right: auto;
-  position: relative;
   text-align: center;
+  justify-content:center;
   background-color: #000;
   color: cornsilk;
+}
+.rodape i{
+  background-color: #000;
 }
 
 .apresentacaoNomes b {

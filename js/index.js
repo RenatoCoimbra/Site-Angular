@@ -51,23 +51,23 @@ app.config(function ($routeProvider) {
     .when("/sobremesas/tiramissu", {
       templateUrl: "./templates/tiramissu.html",
     })
-    .when("/massas/pene", {
-      templateUrl: "./templates/pene.html",
+    .when("/massas/penne", {
+      templateUrl: "./templates/penne.html",
     })
-    .when("/massas/lasanhaPomodoro", {
-      templateUrl: "./templates/lasanhaPomodoro.html",
+    .when("/massas/lasanha", {
+      templateUrl: "./templates/lasanha.html",
     })
     .when("/massas/rondelli", {
       templateUrl: "./templates/rondelli.html",
     })
-    .when("/saladas/CamaraoComAbacate", {
-      templateUrl: "./templates/camaraoComAbacate.html",
+    .when("/saladas/saladaCamarao", {
+      templateUrl: "./templates/saladaCamarao.html",
     })
-    .when("/saladas/Primavera", {
-      templateUrl: "./templates/primavera.html",
+    .when("/saladas/saladaPrimavera", {
+      templateUrl: "./templates/saladaPrimavera.html",
     })
-    .when("/saladas/ruculaComManga", {
-      templateUrl: "./templates/ruculaComManga.html",
+    .when("/saladas/saladaRuculaComManga", {
+      templateUrl: "./templates/saladaRuculaComManga.html",
     })
     ;
     
